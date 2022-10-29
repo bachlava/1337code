@@ -1,9 +1,10 @@
-# Given an integer array nums, return true if any value appears at least 
-# twice in the array, and return false if every element is distinct.
-# Constraints:
-#   1 <= nums.length <= 105
-#   -109 <= nums[i] <= 109
-
+""" 
+Given an integer array nums, return true if any value appears at least 
+twice in the array, and return false if every element is distinct.
+Constraints:
+    1 <= nums.length <= 105
+    -109 <= nums[i] <= 109
+"""
 from typing import List
 
 
@@ -16,6 +17,7 @@ class Solution:
             else:
                 num_dict.update({str(num) : 1})
         return False
+
 
 if __name__ == '__main__':
     nums1 = [1,2,3,1]
