@@ -1,34 +1,25 @@
 """
-You are given a phone number as a string number. 
+You are given a phone number as a string number.
 number consists of digits, spaces ' ', and/or dashes '-'.
-You would like to reformat the phone number in a certain manner. 
-Firstly, remove all spaces and dashes. 
-Then, group the digits from left to right into blocks of length 3 
-until there are 4 or fewer digits. 
+You would like to reformat the phone number in a certain manner.
+Firstly, remove all spaces and dashes.
+Then, group the digits from left to right into blocks of length 3
+until there are 4 or fewer digits.
 The final digits are then grouped as follows:
     2 digits: A single block of length 2.
     3 digits: A single block of length 3.
     4 digits: Two blocks of length 2 each.
-The blocks are then joined by dashes. 
-Notice that the reformatting process should never produce any blocks 
+The blocks are then joined by dashes.
+Notice that the reformatting process should never produce any blocks
 of length 1 and produce at most two blocks of length 2.
 Return the phone number after formatting.
-Example 1:
-    Input: number = "1-23-45 6"
-    Output: "123-456"
-Example 2:
-    Input: number = "123 4-567"
-    Output: "123-45-67"
-Example 3:
-    Input: number = "123 4-5678"
-    Output: "123-456-78"
 Constraints:
     2 <= number.length <= 100
     number consists of digits and the characters '-' and ' '.
     There are at least two digits in number.
 """
 class Solution:
-    def reformatNumber(self, number: str) -> str:
+    def reformat_number(self, number: str) -> str:
         default_size = 3
         digits = ''.join([char for char in number if char.isdigit()])
         digit_groups = []
@@ -47,8 +38,8 @@ class Solution:
 
 if __name__ == '__main__':
     number1 = '1-23-45 6'
-    print(Solution().reformatNumber(number1))
+    print(Solution().reformat_number(number1))
     number2 = '123 4-567'
-    print(Solution().reformatNumber(number2))
+    print(Solution().reformat_number(number2))
     number3 = '123 4-5678'
-    print(Solution().reformatNumber(number3))
+    print(Solution().reformat_number(number3))

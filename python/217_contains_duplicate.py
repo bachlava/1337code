@@ -9,7 +9,7 @@ from typing import List
 
 
 class Solution:
-    def containsDuplicate(self, nums: List[int]) -> bool:
+    def contains_duplicate(self, nums: List[int]) -> bool:
         num_dict = {}
         for num in nums:
             if num_dict.get(str(num)):
@@ -21,8 +21,8 @@ class Solution:
 
 if __name__ == '__main__':
     nums1 = [1,2,3,1]
-    print(Solution().containsDuplicate(nums1))
+    print(Solution().contains_duplicate(nums1))
     nums2 = [1,2,3,4]
-    print(Solution().containsDuplicate(nums2))
+    print(Solution().contains_duplicate(nums2))
     nums3 = [1,1,1,3,3,4,3,2,4,2]
-    print(Solution().containsDuplicate(nums3))
+    print(Solution().contains_duplicate(nums3))

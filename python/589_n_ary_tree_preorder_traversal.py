@@ -4,7 +4,7 @@ nodes' values.
 Nary-Tree input serialization is represented in their level order 
 traversal. 
 Each group of children is separated by the None value (See examples)
-# Definition for a Node.
+Definition for a Node:
 class Node:
     def __init__(self, val=None, children=None):
         self.val = val
